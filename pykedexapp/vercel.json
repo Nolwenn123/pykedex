@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "pykedexapp/manage.py",
+        "src": "pykedexapp/config/wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "pykedexapp/manage.py"
+        "dest": "pykedexapp/config/wsgi.py"
       }
     ]
   }
