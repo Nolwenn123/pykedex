@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/team_view.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pykedex - Teams</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'image/favicon.ico' %}">
+    </head>
+    <body>
+        <script>
+            function afficherAlerte() {
+                // Afficher la fenêtre modale
+                document.getElementById('myModal').style.display = 'block';
+            }
+
+            function fermerModal() {
+                // Fermer la fenêtre modale
+                document.getElementById('myModal').style.display = 'none';
+            }
+
+            function recupererDonneesTeams(){
+                var teamsId = localStorage.getItem("teamsId");
+                var teamsNames = localStorage.getItem("teamsName");
+                var teamsUserId = localStorage.getItem("teamsUserId");
+            }
+        </script>
+        <div class="background-bars">
+            <hr class="hr1">
+            <hr class="hr2">
+            <hr class="hr3">
+            <hr class="hr4">
+            <hr class="hr5">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+            <hr class="hrFull">
+        </div>
+
+        <div class="container">
+            <div class="topnav">
+                <a class="logo" href="#logo">
+                    <img src="{% static 'image/logo.png' %}" alt="image">
+                </a>   
+                <a class="logout" href="/logout">Logout</a>
+
+                <ul class="teams">
+                    {% for team in teams %}
+                        <li>
+                            <a href="/team/{{ team.id }}">{{ team.name }}</a>
+                        </li>
+                    {% endfor %}
+                        <span onclick="afficherAlerte()">+</span>
+                        <form id="myModal" class="modal">
+                            <label>Nom de team :</label>
+                            <input type="text" id="NameTeam">
+                            <button onclick="fermerModal()">Valider</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="pokemon-1">
+                <div class="image"></div>
+                <div class="content">
+                    <div class="button-action">
+                        <a class="info">
+                            ?
+                        </a>
+                        <a class="suppr">
+                            -
+                        </a>
+                        <a class="minus">
+                            ▼
+                        </a>
+                    </div>
+                    <h1>SALAMECHE</h1>
+                    <div class="type-container">
+                        <span class="type1">poison</span>
+                        <span class="type2">sol</span>
+                    </div>
+                    <span class="level">36.LVL</span>
+                    <span class="hp">120/120.HP</span>
+                </div>
+                <div class="progress-bar">
+                        <progress class="hp-bar" value="100" max="100"> 100% </progress>
+                        <progress class="xp" value="0" max="100"> 100% </progress>
+                </div>
+            </div>
+
+            <ul class="pokemon-2-6">
+                <li id="pokemon-2">
+                    <div class="image"></div>
+                    <div class="content">
+                        <div class="button-action">
+                            <a class="info">
+                                ?
+                            </a>
+                            <a class="suppr">
+                                -
+                            </a>
+                            <a class="minus">
+                                ▼
+                            </a>
+                            <a class="plus">
+                                ▲
+                            </a>
+                        </div>
+                        <h1>SALAMECHE</h1>
+                        <div class="type-container">
+                            <span class="type1">poison</span>
+                            <span class="type2">sol</span>
+                        </div>
+                        <span class="level">36.LVL</span>
+                        <span class="hp">120/120.HP</span>
+                    </div>
+                    <div class="progress-bar">
+                        <progress value="100" max="100"> 100% </progress>
+                    </div>
+                </li>
+
+                <li id="pokemon-3">
+                    <div class="image"></div>
+                    <div class="content">
+                        <div class="button-action">
+                            <a class="info">
+                                ?
+                            </a>
+                            <a class="suppr">
+                                -
+                            </a>
+                            <a class="minus">
+                                ▼
+                            </a>
+                            <a class="plus">
+                                ▲
+                            </a>
+                        </div>
+                        <h1>SALAMECHE</h1>
+                        <div class="type-container">
+                            <span class="type1">poison</span>
+                            <span class="type2">sol</span>
+                        </div>
+                        <span class="level">36.LVL</span>
+                        <span class="hp">120/120.HP</span>
+                    </div>
+                    <div class="progress-bar">
+                        <progress value="100" max="100"> 100% </progress>
+                    </div>
+                </li>
+
+                <li id="pokemon-4">
+                    <div class="image"></div>
+                    <div class="content">
+                        <div class="button-action">
+                            <a class="info">
+                                ?
+                            </a>
+                            <a class="suppr">
+                                -
+                            </a>
+                            <a class="minus">
+                                ▼
+                            </a>
+                            <a class="plus">
+                                ▲
+                            </a>
+                        </div>
+                        <h1>SALAMECHE</h1>
+                        <div class="type-container">
+                            <span class="type1">poison</span>
+                            <span class="type2">sol</span>
+                        </div>
+                        <span class="level">36.LVL</span>
+                        <span class="hp">120/120.HP</span>
+                    </div>
+                    <div class="progress-bar">
+                        <progress value="100" max="100"> 100% </progress>
+                    </div>
+                </li>
+
+                <li id="pokemon-5">
+                    <div class="image"></div>
+                    <div class="content">
+                        <div class="button-action">
+                            <a class="info">
+                                ?
+                            </a>
+                            <a class="suppr">
+                                -
+                            </a>
+                            <a class="minus">
+                                ▼
+                            </a>
+                            <a class="plus">
+                                ▲
+                            </a>
+                        </div>
+                        <h1>SALAMECHE</h1>
+                        <div class="type-container">
+                            <span class="type1">poison</span>
+                            <span class="type2">sol</span>
+                        </div>
+                        <span class="level">36.LVL</span>
+                        <span class="hp">120/120.HP</span>
+                    </div>
+                    <div class="progress-bar">
+                        <progress value="100" max="100"> 100% </progress>
+                    </div>
+                </li>
+                
+                <li id="pokemon-6">
+                    <div class="image"></div>
+                    <div class="content">
+                        <div class="button-action">
+                            <a class="info">
+                                ?
+                            </a>
+                            <a class="suppr">
+                                -
+                            </a>
+                            <a class="plus">
+                                ▲
+                            </a>
+                        </div>
+                        <h1>SALAMECHE</h1>
+                        <div class="type-container">
+                            <span class="type1">poison</span>
+                            <span class="type2">sol</span>
+                        </div>
+                        <span class="level">36.LVL</span>
+                        <span class="hp">120/120.HP</span>
+                    </div>
+                    <div class="progress-bar">
+                        <progress value="100" max="100"> 100% </progress>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </body>
+</html>

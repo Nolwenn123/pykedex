@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+ 
+    background-size: cover;
+}
+.card {
+
+  border: 8px solid #56855A;
+  background-color: #9FC399;
+  width: 100%;
+ max-width: 500px;
+ min-height: 530px;
+  margin: auto;
+  margin-top: 20vh;
+  border-radius: 16px;
+  }
+
+  h2 {
+    font-family: 'Press Start 2P';
+    color: aliceblue;
+    font-size: 2.5vh;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 8vh;
+}
+
+input {
+    background-color: #F3D7D7;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card button {
+    margin-top: 130px;
+    margin-left: 30%;
+    border: 5px solid #EBF021;
+    border-radius: 8px;
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+    color: aliceblue;
+    background-color: #AA3838;
+    padding: 25px;
+}
+
+.navbar {
+    display: flex;
+    background-color: #F3BBBB;
+    width: 100vw;
+    height: 10vh;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border-bottom: 4px solid #5CA5B9;
+
+}
+
+.navbar a{
+    font-family: 'Koulen';
+    margin-top: 3vh;
+    margin-left: 50px;
+    color: #950F0F;
+    font-size: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.navbar img {
+    margin-left: 30px;
+    width: 100px;
+    height: auto;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
+
+
+

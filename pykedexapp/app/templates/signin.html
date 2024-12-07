@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header> <div class="navbar"><img src="static/image/logo.png" alt="logo"><a class="back" href="/home">BACK</a></div></header>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="static/image/video.mp4">
+  </video>
+    <div class="card">
+        <h2>SIGN IN</h2>
+        <form action="/signin" method="post" id="signinForm">
+          {% csrf_token %}
+          <input name="username" placeholder="username" type="text">
+          <input name="password" placeholder="password" type="password">
+          <button type="submit" class="signup">SIGN IN</button>
+        </form>
+    </div>
+</body>
+</html>

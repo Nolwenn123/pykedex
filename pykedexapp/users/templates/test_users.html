@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Users API</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Register User</h2>
+<form id="registerForm">
+    Username: <input type="text" name="username" id="registerUsername"><br>
+    Password: <input type="password" name="password" id="registerPassword"><br>
+    <input type="submit" value="Register">
+</form>
+
+<h2>Login User</h2>
+<form id="loginForm">
+    Username: <input type="text" name="username" id="loginUsername"><br>
+    Password: <input type="password" name="password" id="loginPassword"><br>
+    <input type="submit" value="Login">
+</form>
+
+<h2>Logout User</h2>
+<button id="logoutButton">Logout</button>
+
+<script>
+    $(document).ready(function () {
+        $('#registerForm').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: 'http://127.0.0.1:8000/api/users/auth/register/',
+                data: {
+                    username: $('#registerUsername').val(),
+                    password: $('#registerPassword').val(),
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                success: function (response) {
+                    alert('Registration successful');
+                },
+                error: function (response) {
+                    console.log(response);
+                    alert('Registration failed');
+                }
+            });
+        });
+
+        $('#loginForm').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: 'http://127.0.0.1:8000/api/users/auth/login/',
+                data: {
+                    username: $('#loginUsername').val(),
+                    password: $('#loginPassword').val(),
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                success: function (response) {
+                    alert('Login successful');
+                },
+                error: function (response) {
+                    alert('Login failed');
+                }
+            });
+        });
+
+        $('#logoutButton').click(function () {
+            $.ajax({
+                type: 'POST',
+                url: 'http://127.0.0.1:8000/api/users/auth/logout/',
+                data: {
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                success: function (response) {
+                    alert('Logout successful');
+                },
+                error: function (response) {
+                    alert('Logout failed');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

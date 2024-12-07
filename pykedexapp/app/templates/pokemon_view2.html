@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/pokemon_view.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="topnav1">
+            <a class="logo" href="#logo">
+                <img src="{% static 'image/logo.png' %}" alt="image">
+            </a>
+            <div class="team">
+                <p>Team 1</p>
+                <p>Team 2</p>
+                <p>Team 3</p>
+            </div>
+            <a class="logout" href="/">LOGOUT</a>
+        </div>
+
+        <div id="topnav2">
+            <div class="topnav2-1">
+                <div id="topnav2-1-1">
+                    <img id="icone_pokemon" src="{% static 'image/logo.png' %}" alt="image">
+                    <p>INFOS POKEMON</p>
+                </div>
+                <div id="rond_blanc" onclick="redirectToViewPokemon()"></div>
+            </div>
+            <div class="topnav2-2">
+                <div id="rond_bleu" onclick="redirectToViewPokemon2()"></div>
+            </div>
+            <div class="topnav2-3">
+                <img id="image_previous" src="{% static 'image/previous.png' %}" alt="image">
+                <a id="ajouter_pokemon_team" href="/team_view">+TEAM</a>
+                <img id="image_next" src="{% static 'image/next.png' %}" alt="image">
+            </div>
+        </div>
+
+        <div id="div_central">
+            <div class="div_gauche">
+                <div id="div_gauche_interne">
+                    <p id="niveau_pokemon">LVL.36</p>
+                    <p id="nom_pokemon">GROTADMORV</p>
+                </div>
+                <div id="fond">
+                    <img id="image_pokemon" src="{% static 'image/logo.png' %}" alt="image">
+                </div>
+            </div>
+            <div id="div_droite">
+                <div class="ligne">
+                    <div class="not_data"><p>N°</p></div>
+                    <p class="data">011</p>
+                </div>
+                <div class="ligne">
+                    <div class="not_data"><p>Nom</p></div>
+                    <p class="data">Salameche</p>
+                </div>
+                <div class="ligne">
+                    <div class="not_data"><p>Type</p></div>
+                    <div class="data">
+                        <p class="type">Poison</p>
+                        <p class="type">feu</p>
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="not_data"><p>Objet</p></div>
+                    <p class="data">Aucun</p>
+                </div>
+            </div>
+        </div>
+        <div id="div_du_bas">
+            <div class="not_data"><p>Memo</p></div>
+            <div id="data_description">
+                <p>Nature gentil.</p>
+            </div>
+        </div>
+
+        <div id="loading">
+            <img src="{% static 'image/poke_ball.png' %}" alt="Chargement en cours...">
+        </div>
+
+    <script>
+          function redirectToPokemonView1() {
+            // Remplacez "nouvelle_page.html" par l'URL de la page vers laquelle vous souhaitez rediriger
+            window.location.href = "http://127.0.0.1:8000/pokemon_view";
+          }
+
+          function redirectToPokemonView2() {
+            // Remplacez "nouvelle_page.html" par l'URL de la page vers laquelle vous souhaitez rediriger
+            window.location.href = "http://127.0.0.1:8000/pokemon_view2";
+          }
+
+          function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
+  }
+
+  // Afficher l'élément de chargement au début
+  document.getElementById('loading').style.display = 'flex';
+
+  // Simuler un chargement prolongé de 3 secondes (3000 millisecondes)
+  //setTimeout(hideLoading, 3000);
+    </script>
+    </body>
+</html>
