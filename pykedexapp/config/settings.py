@@ -29,7 +29,9 @@ SECRET_KEY = "django-insecure-chv!oyx22z5g70-o0go1y-=5icx%dg&owp2*2^^q1t9ky+%w4r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".vercel.app"]
+
+STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
 
 # Application definition
 
