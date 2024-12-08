@@ -26,6 +26,9 @@
         "src": "/(.*)",
         "dest": "pykedexapp/config/wsgi.py"
       }
-    ]
-  }
+    ],
+    "rewrites": [
+          { "source": "/static/(.*)", "destination": "/static/$1" }
+        ]
+}
   
